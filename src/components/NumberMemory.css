@@ -1,0 +1,56 @@
+.memory-test {
+    height: 100vh;
+    background-color: rgba(163, 219, 236, 0.87);
+    background-size: contain;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.memory-test .start, .memory-test .input, .memory-test .number, .memory-test .success, .memory-test .fail {
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+}
+
+#displayNumber {
+    font-size: 80px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#text , #successText, #failText {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#score {
+    color: rgb(58, 170, 58);
+}
+
+#failScore {
+    color: rgb(189, 34, 34);
+}
+
+#btnSubmit {
+    margin-top: 2%;
+}
+
+#btnTryAgain {
+    background-color: rgb(112, 18, 18);
+}
