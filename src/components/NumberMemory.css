@@ -1,0 +1,62 @@
+.memory-test {
+    height: 100vh;
+    background-image: url(./background.jpg);
+    background-size: contain;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.memory-test .start, .memory-test .input, .memory-test .number, .memory-test .success, .memory-test .fail {
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+}
+
+#btnStart {
+    color: white;
+    cursor: pointer;
+    border: 3px solid white;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1.5 rem;
+}
+
+#btnStart:hover {
+    color: red;
+    border-color: red;
+  }
+
+#displayNumber {
+    font-size: 80px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#text {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+#btnSubmit {
+    margin-top: 2%;
+}
+
+#failText {
+    color: rgb(112, 18, 18);
+}
