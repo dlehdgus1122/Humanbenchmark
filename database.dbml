@@ -1,0 +1,58 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table users {
+  id integer [primary key]
+  auth0id text [not null, unique]
+  best_reaction_time integer
+  best_memory_test integer
+  best_sequence_memory integer
+  best_aim_trainer integer
+  best_typing_test integer
+}
+
+Table reaction_time {
+  id integer [primary key]
+  user_id integer [not null]
+  score float [not null]
+  timestamp time [not null]
+}
+
+Table memory_test {
+  id integer [primary key]
+  user_id integer [not null]
+  score integer [not null]
+  timestamp time [not null]
+}
+
+Table sequence_memory {
+  id integer [primary key]
+  user_id integer [not null]
+  score integer [not null]
+  timestamp time [not null]
+}
+
+Table aim_trainer {
+  id integer [primary key]
+  user_id integer [not null]
+  score integer [not null]
+  timestamp time [not null]
+}
+
+Table typing_test {
+  id integer [primary key]
+  user_id integer [not null]
+  score float [not null]
+  timestamp time [not null]
+}
+
+Ref: users.id < reaction_time.user_id
+Ref: users.id < memory_test.user_id
+Ref: users.id < sequence_memory.user_id
+Ref: users.id < aim_trainer.user_id
+Ref: users.id < typing_test.user_id
+Ref: users.best_reaction_time - reaction_time.id
+Ref: users.best_memory_test - memory_test.id
+Ref: users.best_sequence_memory - sequence_memory.id
+Ref: users.best_aim_trainer - aim_trainer.id
+Ref: users.best_typing_test - typing_test.id

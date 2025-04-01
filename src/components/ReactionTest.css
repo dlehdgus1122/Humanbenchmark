@@ -1,0 +1,140 @@
+.ReactionTest {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: rgba(163, 219, 236, 0.87);
+  background-size: contain;
+  
+
+  > {
+    * {
+      width: 80vw;
+    }
+
+    hr {
+      border: none;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    progress[value] {
+      height: 10px;
+      margin-top: 20px;
+      appearance: none;
+
+      &::-webkit-progress-value {
+        background-image: -webkit-linear-gradient(left, #007acc, #007acc);
+      }
+
+      &::-webkit-progress-bar {
+        background-color: #eee;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+      }
+    }
+  }
+
+
+  .Start {
+    --color: #1e1e1e;
+
+    border: 1px solid #dee2e628;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    &.go {
+      position: relative;
+      background-image: linear-gradient(
+        to right,
+        var(--color) 0%,
+        var(--color) 19%,
+        var(--color) 60%,
+        var(--color) 100%
+      );
+
+      &::after {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        z-index: 5;
+        width: 100px;
+        height: 100px;
+
+        background-image: linear-gradient(
+          to right,
+          #5cff3ba2 0%,
+          #5cff3ba2 19%,
+          #5cff3ba2 60%,
+          #5cff3ba2 100%
+        );
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        backdrop-filter: invert(100%);
+        content: "";
+      }
+    }
+    &.wait {
+      background-image: linear-gradient(
+        to right,
+        var(--color) 0%,
+        var(--color) 19%,
+        var(--color) 60%,
+        var(--color) 100%
+      );
+    }
+  }
+
+  .history {
+    margin-top: 20px;
+
+    .list {
+      position: absolute;
+      
+
+      .item {
+        font-size: medium;
+        
+      }
+    }
+  }
+
+
+  .result {
+    h1 {
+      display: inline;
+      color: #9cdcfe;
+    }
+  }
+
+  .msg {
+    font-size: medium;
+
+    p {
+      margin: 10px;
+    }
+
+    .rank {
+      font-size: xx-large;
+    }
+
+    .rank-msg {
+      margin: 50px 0;
+      font-size: x-large;
+
+      &::before {
+        content: '"';
+      }
+      &::after {
+        content: '"';
+      }
+    }
+  }
+
+  .replay {
+    button {
+      width: 100%;
+    }
+  }
+}
